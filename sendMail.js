@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
-
+const dotenv = require('dotenv');
+dotenv.config();
 
   var transporter =  nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -7,14 +8,14 @@ const nodemailer = require("nodemailer");
     service: "gmail",
     auth: {
       user: "utkptesting@gmail.com", // user email
-      pass: "zelhxeygvpkhpisp", // user password
+      pass: process.env.PASSWORD, // user password
     },
   });
 
   // send mail with defined transport object
   var mailOptions = {
     from: "utkptesting@gmail.com", // sender address
-    to: "rahat@gmail.com", // list of receivers 
+    to: "utkp200@gmail.com", // list of receivers 
     subject: "Thanks for using our Website", // Subject line
     text: "Do not reply on this email as this email is bot", // plain text body
     // html: "<h1>Do not reply on this email as this email is bot</h1>", // html body here we can use html also
