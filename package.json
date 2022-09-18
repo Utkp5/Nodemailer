@@ -1,0 +1,18 @@
+{
+  "name": "nodemailer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sendMail.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon sendMail.js"
+  },
+  "author": "utkarsh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "nodemailer": "^6.7.8",
+    "nodemon": "^2.0.20"
+  }
+}
