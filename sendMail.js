@@ -7,15 +7,15 @@ dotenv.config();
     // port: 465,
     service: "gmail",
     auth: {
-      user: "utkptesting@gmail.com", // user email
+      user: process.env.GMAIL, // user email
       pass: process.env.PASSWORD, // user password
     },
   });
 
   // send mail with defined transport object
   var mailOptions = {
-    from: "utkptesting@gmail.com", // sender address
-    to: "utkp200@gmail.com", // list of receivers 
+    from: process.env.GMAIL, // sender address
+    to: process.env.TO, // list of receivers 
     subject: "Thanks for using our Website", // Subject line
     text: "Do not reply on this email as this email is bot", // plain text body
     // html: "<h1>Do not reply on this email as this email is bot</h1>", // html body here we can use html also
